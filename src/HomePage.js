@@ -87,6 +87,61 @@ class HomePage extends React.Component {
             </div>
           </div>
         </div>
+
+        <div className={css(styles.section2Wrapper)}>
+          <h2 className={css(styles.section2Title)}>
+            IMAŠ TE     
+            <span className={css(styles.highlited)}>   SIMPTOME</span>?
+          </h2>
+          <div className={css(styles.simptomi)}>
+            <div className={css(styles.simptom)}>
+              <img alt="korona simptom" src="./assets/simptom1.png" className={css(styles.simptomImg1)}/>
+              <div className={css(styles.simptomText1)}>
+                  VROČINA <span className={css(styles.highlited)}>NAD 37.8 C</span>
+              </div>
+            </div>
+            <div className={css(styles.simptom)}>
+              <img alt="korona simptom" src="./assets/simptom2.png" className={css(styles.simptomImg)}/>
+              <div className={css(styles.simptomText)}>
+                  KAŠLJANJE
+              </div>
+            </div>
+            <div className={css(styles.simptom)}>
+              <img alt="korona simptom" src="./assets/simptom3.png" className={css(styles.simptomImg)}/>
+              <div className={css(styles.simptomText)}>
+                  TEŽAVE <span className={css(styles.highlited)}>PRI DIHANJU</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={css(styles.grayBack)}>
+          <div className={css(styles.section3Wrapper)}>
+            <div className={css(styles.oknca)}>
+              <div className={css(styles.oknce)}>
+                KAKO <span className={css(styles.highlited)}>RAVNATI</span> OB SUMU NA OKUŽBO?
+              </div>
+              <div className={css(styles.oknce)}>
+                KAKO LAHKO <span className={css(styles.highlited)}>PREPREČIŠ</span> OKUŽBO?
+              </div>
+              <div className={css(styles.oknce)}>
+                <span className={css(styles.highlited)}>UKREPI</span> VLADE
+              </div>
+            </div>
+            <div className={css(styles.textWrapper)}>
+              <div className={css(styles.text)}>
+              
+              </div>
+              <div className={css(styles.text)}>
+              
+              </div>
+              <div className={css(styles.text)}>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }
@@ -137,6 +192,10 @@ const styles = StyleSheet.create({
   highlited:{
     color:"rgb(7,236,236)",
   },
+
+
+
+
   grayBack:{
     background:"#F5F5F5",
   },
@@ -147,7 +206,7 @@ const styles = StyleSheet.create({
     display:"flex",
     justifyContent:"space-between",
     paddingTop:50,
-    paddingBottom:60,
+    paddingBottom:80,
   },
   section1Left:{
     width:"calc(100% - 400px)",
@@ -256,6 +315,99 @@ const styles = StyleSheet.create({
       boxShadow: "0px 2px 24px rgba(21, 23, 54, 0.15)",
     },
   },  
+
+
+
+
+
+  section2Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    paddingTop:80,
+    paddingBottom:80,
+  },
+  section2Title:{
+    marginBottom:40,
+    fontSize:24,
+  },
+  simptomi:{
+    display:"flex",
+  },
+  simptom:{
+    width:250,
+    marginLeft:40,
+    marginRight:40,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    flexDirection:"column",
+  },
+  simptomImg1:{
+    width:210,
+  },
+  simptomImg:{
+    width:200,
+  },
+  simptomText1:{
+
+  },
+  simptomText:{
+    marginTop:10,
+  },
+
+
+
+
+  section3Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    paddingTop:50,
+    paddingBottom:60,
+  },
+  oknca:{
+    display:"flex",
+    justifyContent:"space-between",
+  },
+  oknce:{
+    border:"5px rgb(0,0,0) solid",
+    padding:10,
+    paddingRight:56,
+    height:100,
+    width:"23%",
+    minWidth:200,
+    fontSize:24,
+    background:"#fff",
+    transition:"0.2",
+    cursor:"pointer",
+    ":hover":{
+      border:"5px rgb(7,236,236) solid",
+    }
+  },
+  textWrapper:{
+
+  },
+  text:{
+
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
