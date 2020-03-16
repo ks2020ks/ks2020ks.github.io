@@ -27,7 +27,7 @@ class HomePage extends React.Component {
               <div className={css(styles.krogci)}>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    6156
+                    6712
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO TESTIRANJ
