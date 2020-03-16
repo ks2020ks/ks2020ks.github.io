@@ -79,7 +79,7 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID RAZŠIRJENOSTI OKUŽBE S KORONAVIRUSOM
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="hsttps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
