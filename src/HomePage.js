@@ -79,7 +79,7 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID OBOLELIH
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="hsttps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
@@ -209,15 +209,15 @@ class HomePage extends React.Component {
             </div>
           </div>
         </div>
-        {/*
+        
         <div className={css(styles.section4Wrapper)}>
           <div className={css(styles.section4WrapperLeft)}>
-            <div class="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/KrizniStabRS/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KrizniStabRS/">Krizni štab Republike Slovenije</a></blockquote></div>
+            <div class="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-width="320" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/KrizniStabRS/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KrizniStabRS/">Krizni štab Republike Slovenije</a></blockquote></div>
           </div>
           <div className={css(styles.section4WrapperRight)}>
             <a class="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
           </div>
-        </div>*/}
+        </div>
 
         <div className={css(styles.blackBack)}>
           <div className={css(styles.section5Wrapper)}>
@@ -501,8 +501,8 @@ const styles = StyleSheet.create({
     alignItems:"center",
     paddingTop:80,
     paddingBottom:80,
-    '@media (max-width: 500px)': {
-      width:"calc(100% - 50px)",
+    '@media (max-width: 550px)': {
+      width:"calc(100% - 40px)",
     },
     '@media (max-width: 480px)': {
       paddingBottom:40,
@@ -589,16 +589,22 @@ const styles = StyleSheet.create({
     margin:"0 auto",
     paddingTop:50,
     paddingBottom:60,
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   oknca:{
     display:"flex",
     justifyContent:"space-between",
+    '@media (max-width: 700px)': {
+      flexDirection:"column",
+    },
   },
   oknce:{
     border:"5px rgb(0,0,0) solid",
     padding:10,
     height:100,
-    width:"23%",
+    width:"20%",
     userSelect:"none",
     minWidth:300,
     fontSize:24,
@@ -609,7 +615,21 @@ const styles = StyleSheet.create({
     position:"relative",
     ":hover":{
       border:"5px rgb(7,236,236) solid",
-    }
+    },
+    '@media (max-width: 1100px)': {
+      fontSize:20,
+      minWidth:230,
+    },
+    '@media (max-width: 900px)': {
+      fontSize:16,
+      minWidth:200,
+      height:80,
+    },
+    '@media (max-width: 800px)': {
+      minWidth:165,
+      marginBottom:20,
+      flexDirection:"column",
+    },
   },
   oknceActive:{
     userSelect:"none",
@@ -624,10 +644,30 @@ const styles = StyleSheet.create({
     cursor:"pointer",
     textAlign:"center",
     position:"relative",
+    '@media (max-width: 1100px)': {
+      fontSize:20,
+      minWidth:230,
+    },
+    '@media (max-width: 900px)': {
+      fontSize:16,
+      minWidth:200,
+      height:80,
+    },
+    '@media (max-width: 800px)': {
+      minWidth:165,
+      flexDirection:"column",
+      marginBottom:20,
+    },
   },
   oknceText:{
     paddingRight:56,
     textAlign:"left",
+    '@media (max-width: 1100px)': {
+      paddingRight:26,
+    },
+    '@media (max-width: 800px)': {
+      paddingRight:0,
+    },
   },
   arrDown:{
     width:50,
@@ -636,9 +676,17 @@ const styles = StyleSheet.create({
   arrDown3:{
     width:50,
     marginTop:45,
+    '@media (max-width: 900px)': {
+      marginTop:35,
+    },
   },
   textWrapper:{
     paddingTop:30,
+    minHeight:300,
+    '@media (max-width: 800px)': {
+      paddingTop:10,
+      minHeight:0,
+    },
   },
   text:{
     overflow:"hidden",
@@ -667,12 +715,31 @@ const styles = StyleSheet.create({
     paddingTop:50,
     paddingBottom:80,
     minHeight:600,
+    '@media (max-width: 800px)': {
+      flexDirection:"column-reverse",
+    },
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   section4WrapperLeft:{
     width:"calc(50% - 40px)",
+    '@media (max-width: 800px)': {
+      width:"100%",
+      margin:"0 auto",
+      marginBottom:40,
+      maxWidth:500,
+    },
   },
   section4WrapperRight:{
     width:"calc(50% - 40px)",
+    '@media (max-width: 800px)': {
+      display:"flex",
+      justifyContent:"center",
+      alignItems:"center",
+      width:"100%",
+      marginBottom:40,
+    },
   },
 
 
@@ -689,12 +756,31 @@ const styles = StyleSheet.create({
     paddingTop:50,
     alignItems:"center",
     paddingBottom:50,
+    '@media (max-width: 600px)': {
+      flexDirection:"column",
+    },
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   section5Text:{
     fontSize:30,
     maxWidth:600,
     lineHeight:1.4,
     color:"#fff",
+    '@media (max-width: 900px)': {
+      maxWidth:450,
+      fontSize:24,
+    },
+    '@media (max-width: 750px)': {
+      maxWidth:300,
+      fontSize:20,
+    },
+    '@media (max-width: 600px)': {
+      maxWidth:380,
+      fontSize:24,
+      textAlign:"center",
+    },
   },
   section5Button:{
     color:"#fff",
@@ -703,6 +789,9 @@ const styles = StyleSheet.create({
     border:"4px solid rgb(7,236,236)",
     cursor:"pointer",
     transition:"0.2s",
+    '@media (max-width: 600px)': {
+      marginTop:30,
+    },
     ":hover":{
       boxShadow: "0px 2px 24px rgba(21, 23, 54, 0.15)",
     }
@@ -720,12 +809,22 @@ const styles = StyleSheet.create({
     paddingTop:30,
     alignItems:"center",
     paddingBottom:50,
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   section6Logo:{
     width:100,
+    '@media (max-width: 400px)': {
+      width:90
+    },
   },
   section6Text:{
     marginLeft:30,
+    '@media (max-width: 400px)': {
+      marginLeft:20,
+      fontSize:12,
+    },
   },
 
   mailto:{
