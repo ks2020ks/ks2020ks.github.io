@@ -43,7 +43,7 @@ class HomePage extends React.Component {
                 </div>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    38
+                    34
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO OKUŽENIH DANES
