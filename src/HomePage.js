@@ -67,7 +67,7 @@ class HomePage extends React.Component {
             </div>
             <div className={css(styles.section1Right)}>
               <div className={css(styles.alarm)}>
-                <img className={css(styles.alarmImg)} alt="alarm korona" src="../assets/alarm.png" />
+                <img className={css(styles.alarmImg)} alt="alarm korona" src="./assets/alarm.png" />
                 <div className={css(styles.alarmTitle)}>
                   Želiš biti obveščen o stanju koronavirusa v Sloveniji?
 
