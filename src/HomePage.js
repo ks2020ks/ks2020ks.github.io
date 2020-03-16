@@ -273,10 +273,17 @@ class HomePage extends React.Component {
         </div>
         
         <div className={css(styles.section4Wrapper)}>
-          <div className={css(styles.section4WrapperLeft)}>
-            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="600" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+          <div className={css(styles.section4WrapperLeftDesktop1)}>
+            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+          </div>
+          <div className={css(styles.section4WrapperLeftDesktop2)}>
+            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="380" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+          </div>
+          <div className={css(styles.section4WrapperLeftMobile)}>
+            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="270" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
           <div className={css(styles.section4WrapperRight)}>
+            <a href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @KrizniStabRS</a>
             <a className="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
           </div>
         </div>
@@ -831,20 +838,46 @@ const styles = StyleSheet.create({
       width:"calc(100% - 50px)",
     },
   },
-  section4WrapperLeft:{
+  section4WrapperLeftDesktop1:{
     width:"calc(50% - 40px)",
     '@media (max-width: 800px)': {
       margin:"0 auto",
       width:"auto",
       marginBottom:40,
     },
+    '@media (max-width: 1050px)': {
+      display:"none"
+    },
   },
+  section4WrapperLeftDesktop2:{
+    width:"calc(50% - 40px)",
+    '@media (max-width: 800px)': {
+      margin:"0 auto",
+      width:"auto",
+      marginBottom:40,
+    },
+    '@media (max-width: 450px)': {
+      display:"none"
+    },
+    '@media (min-width: 1050px)': {
+      display:"none"
+    },
+  },
+  section4WrapperLeftMobile:{
+    width:"calc(50% - 40px)",
+    '@media (max-width: 800px)': {
+      margin:"0 auto",
+      width:"auto",
+      marginBottom:40,
+    },
+    '@media (min-width: 450px)': {
+      display:"none"
+    },
+  },
+
   section4WrapperRight:{
     width:"calc(50% - 40px)",
     '@media (max-width: 800px)': {
-      display:"flex",
-      justifyContent:"center",
-      alignItems:"center",
       width:"100%",
       marginBottom:40,
     },
