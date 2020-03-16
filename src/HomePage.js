@@ -2,18 +2,23 @@ import React from 'react';
 // import logo from './logo.svg';
 import { StyleSheet, css } from 'aphrodite';
 import autobind from 'core-decorators/lib/autobind';
+import Helmet from "react-helmet";
 
 @autobind
 class HomePage extends React.Component {
   render() {
     return (
       <div className={css(styles.wrapper)}>
+        <Helmet>
+          <title>USTAVIMO KORONO SKUPAJ</title>
+          <meta name="description" content="USTAVIMO KORONO SKUPAJ"/>
+        </Helmet>
         <div className={css(styles.heroWrapper)}>
           <div className={css(styles.titleWrapper)}>
             <h1 className={css(styles.h1)}>
               <span className={css(styles.highlited)}>USTAVIMO</span> KORONO <span className={css(styles.highlited)}>SKUPAJ</span>
             </h1>
-            <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="../../assets/logo.png" />
+            <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="../assets/logo.png" />
           </div>
         </div>
         <div className={css(styles.grayBack)}>
@@ -57,12 +62,12 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID OBOLELIH
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="hsttps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
               <div className={css(styles.alarm)}>
-                <img className={css(styles.alarmImg)} alt="alarm korona" src="../../assets/alarm.png" />
+                <img className={css(styles.alarmImg)} alt="alarm korona" src="../assets/alarm.png" />
                 <div className={css(styles.alarmTitle)}>
                   Želiš biti obveščen o stanju koronavirusa v Sloveniji?
 
