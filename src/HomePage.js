@@ -79,7 +79,7 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID OBOLELIH
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="hsttps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
@@ -209,7 +209,7 @@ class HomePage extends React.Component {
             </div>
           </div>
         </div>
-
+        {/*
         <div className={css(styles.section4Wrapper)}>
           <div className={css(styles.section4WrapperLeft)}>
             <div class="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/KrizniStabRS/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KrizniStabRS/">Krizni štab Republike Slovenije</a></blockquote></div>
@@ -217,7 +217,7 @@ class HomePage extends React.Component {
           <div className={css(styles.section4WrapperRight)}>
             <a class="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
           </div>
-        </div>
+        </div>*/}
 
         <div className={css(styles.blackBack)}>
           <div className={css(styles.section5Wrapper)}>
@@ -233,7 +233,7 @@ class HomePage extends React.Component {
         <div className={css(styles.section6Wrapper)}>
           <img src="./assets/logoFooter.jpg" alt="krizni štab republike Slovenije" className={css(styles.section6Logo)} />
           <div className={css(styles.section6Text)}>
-            Podporna stran Kriznega štaba vlade Republike Slovenije. Kontakt: krizni-stab@gov.si
+            Podporna stran Kriznega štaba vlade Republike Slovenije. Kontakt: <a className={css(styles.mailto)} href="mailto:krizni-stab@gov.si"> krizni-stab@gov.si</a>
           </div>
         </div>
 
@@ -267,6 +267,17 @@ const styles = StyleSheet.create({
     fontWeight:400,
     fontSize:"50px",
     color:"#fff",
+    '@media (max-width: 800px)': {
+      fontSize:38,
+    },
+    '@media (max-width: 600px)': {
+      fontSize:38,
+      maxWidth:360,
+    },
+    '@media (max-width: 400px)': {
+      fontSize:32,
+      maxWidth:300,
+    },
   },
   titleWrapper:{
     height:220,
@@ -276,13 +287,26 @@ const styles = StyleSheet.create({
     width:"calc(100% - 80px)",
     maxWidth:1200,
     margin:"0 auto",
-    position:"relative"
+    position:"relative",
+    '@media (max-width: 950px)': {
+      paddingBottom:40,
+      height:180,
+    },
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   logo:{
     position:"absolute",
     right:0,
     bottom:20,
     width:180,
+    '@media (max-width: 600px)': {
+      width:140,
+    },
+    '@media (max-width: 400px)': {
+      width:120,
+    },
   },
   highlited:{
     color:"rgb(7,236,236)",
@@ -302,39 +326,73 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     paddingTop:50,
     paddingBottom:80,
+    '@media (max-width: 1000px)': {
+      flexDirection:"column",
+    },
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
   },
   section1Left:{
     width:"calc(100% - 400px)",
     maxWidth:760,
+    '@media (max-width: 1000px)': {
+      width:"100%",
+      maxWidth:1000,
+    },
   },
   krogci:{
     display:"flex",
     marginTop:14,
-    justifyContent:"space-between"
+    justifyContent:"space-between",
+    '@media (max-width: 1000px)': {
+      maxWidth:650,
+      margin:"0 auto",
+      justifyContent:"space-between",
+    },
+    '@media (max-width: 600px)': {
+      flexWrap:"wrap",
+      maxWidth:400,
+    },
   },
   krogec:{
     width:140,
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
+    '@media (max-width: 600px)': {
+      marginBottom:40,
+    },
+    '@media (max-width: 400px)': {
+      width:120,
+    },
   },
   krogecCounter:{
     borderRadius:"50%",
-    width:100,
-    height:100,
-    border:"10px rgb(7,236,236) solid",
+    width:90,
+    height:90,
+    background:"#fff",
+    border:"5px rgb(7,236,236) solid",
     display:"flex",
     justifyContent:"center",
     alignItems:"center",
   },
   krogecText:{
     marginTop:20,
-    fontSize:14,
+    fontSize:12,
     fontWeight:600,
     textAlign:"center",
   },
   zemljevid:{
     marginTop:50,
+    '@media (max-width: 1000px)': {
+      maxWidth:650,
+      margin:"0 auto",
+      marginTop:50,
+    },
+    '@media (max-width: 600px)': {
+      marginTop:20,
+    },
   },
   zemljevidTitle:{
     fontSize:20,
@@ -344,12 +402,20 @@ const styles = StyleSheet.create({
     width:"100%",
     height:440,
     background:"#000",
+
   },                
   section1Right:{
     width:350,
+    '@media (max-width: 1000px)': {
+      margin:"0 auto",
+      marginTop:40,
+    },
+    '@media (max-width: 400px)': {
+      width:"100%",
+    },
   },
   alarm:{
-    width:"cacl(100% - 80px)",
+    width:"calc(100% - 80px)",
     padding:40,
     margin:"0 auto",
     display:"flex",
@@ -357,6 +423,10 @@ const styles = StyleSheet.create({
     flexDirection:"column",
     alignItems:"center",
     background:"#fff",
+    '@media (max-width: 400px)': {
+      padding:20,
+      width:"calc(100% - 40px)",
+    },
   },
   alarmImg:{
     width:150,
@@ -367,6 +437,9 @@ const styles = StyleSheet.create({
     marginBottom:40,
     fontSize:30,
     fontWeight:500,
+    '@media (max-width: 400px)': {
+      fontSize:24,
+    },
   },
   alarmText:{
     lineHeight:1.4,
@@ -415,6 +488,9 @@ const styles = StyleSheet.create({
 
 
 
+
+
+
   section2Wrapper:{
     width:"calc(100% - 80px)",
     maxWidth:1200,
@@ -425,6 +501,12 @@ const styles = StyleSheet.create({
     alignItems:"center",
     paddingTop:80,
     paddingBottom:80,
+    '@media (max-width: 500px)': {
+      width:"calc(100% - 50px)",
+    },
+    '@media (max-width: 480px)': {
+      paddingBottom:40,
+    },
   },
   section2Title:{
     marginBottom:40,
@@ -432,6 +514,14 @@ const styles = StyleSheet.create({
   },
   simptomi:{
     display:"flex",
+    width:"100%",
+    '@media (max-width: 1000px)': {
+      justifyContent:"space-between",
+    },
+    '@media (max-width: 480px)': {
+      flexDirection:"column",
+      alignItems:"center",
+    },
   },
   simptom:{
     width:250,
@@ -441,19 +531,54 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     alignItems:"center",
     flexDirection:"column",
+    '@media (max-width: 1000px)': {
+      marginLeft:0,
+      marginRight:0,
+    },
+    '@media (max-width: 800px)': {
+      width:170,
+    },
+    '@media (max-width: 480px)': {
+      marginBottom:40,
+    },
   },
   simptomImg1:{
     width:210,
+    '@media (max-width: 800px)': {
+      width:155,
+    },
+    '@media (max-width: 600px)': {
+      width:122,
+    },
+    '@media (max-width: 480px)': {
+      width:155,
+    },
   },
   simptomImg:{
     width:200,
+    '@media (max-width: 800px)': {
+      width:150,
+    },
+    '@media (max-width: 600px)': {
+      width:120,
+    },
+    '@media (max-width: 480px)': {
+     width:150,
+    },
   },
   simptomText1:{
-
+    '@media (max-width: 600px)': {
+      fontSize:14,
+    },
   },
   simptomText:{
     marginTop:10,
+    textAlign:"center",
+    '@media (max-width: 600px)': {
+      fontSize:14,
+    },
   },
+
 
 
 
@@ -541,6 +666,7 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     paddingTop:50,
     paddingBottom:80,
+    minHeight:600,
   },
   section4WrapperLeft:{
     width:"calc(50% - 40px)",
@@ -602,214 +728,18 @@ const styles = StyleSheet.create({
     marginLeft:30,
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   title:{
-    color: "#838383",
-    fontSize: 40,
-    fontWeight: 300,
-    letterSpacing: 1.8,
-    lineHeight: "56px",
-   },
-   subtitle:{
-    fontSize: 12,
-    color: "#4CAF50"
-   },
-   infoWrapper:{
-    marginLeft: 30,
-    paddingTop: 30,
-    maxWidth:800,
-    '@media (max-width: 800px)': {
-      marginLeft: 0,
-    },
-   },
-   text1:{
-
-    marginTop:30,
-    marginBottom:20,
-    fontSize: 17,
-    lineHeight:1.4,
-    color: "#707070",
-   },
-   text2:{
-    fontSize: 11,
-    color: "#595959",
-    marginBottom: 20,
-   },
-   text3:{
-    fontSize: 11,
-    color: "#595959",
-    marginBottom: 90,
-   },
-   storitve:{
-    paddingTop: 40,
-    maxWidth: 1000,
-
-    display: "flex",
-    flexFlow: "row wrap",
-   },
-   storitveBox:{
-    display:"block",
-    textDecoration:"none",
-    width: 210,
-    marginRight: 50,
-    marginBottom: 50,
-    '@media (max-width: 770px)': {
-      marginRight: 20,
-    },
-
-    '@media (max-width: 550px)': {
-      width: 180,
-      marginRight: 50,
-    },
-    '@media (max-width: 470px)': {
-      width: 141,
-      marginRight: 30,
-    },
-    '@media (max-width: 373px)': {
-      width: 130,
-      marginRight: 20,
-    },
-   },
-   storitveBoxMargin:{
-      marginRight: 50,
-      width: 210,
-      '@media (max-width: 770px)': {
-        marginRight: 20,
-      },
-      '@media (max-width: 550px)': {
-        marginRight: 0,
-        width: 180,
-      },
-      '@media (max-width: 470px)': {
-        width: 141,
-        marginRight: 0,
-      },
-      '@media (max-width: 373px)': {
-        width: 120,
-        marginRight: 0,
-      },
-   },
-   storitveBoxNoMargin:{
-    marginRight: 0,
-   },
-   
-   storitveTitle:{
-    fontWeight: 600,
-    fontSize: 21,
-    textDecoration:"none",
-    display:"block",
-    lineHeight:1.5,
-    letterSpacing:0.8,
-    color: "#595959",
-    transition:"0.2s",
-    marginBottom: 20,
-    cursor:"pointer",
-    '@media (max-width: 450px)': {
-      fontSize: 20,
-    },
-  },
-  storitveText:{
-    textDecoration:"none",
-    display:"block",
-    color:"#838383",
-    fontSize:14,
-    letterSpacing:0.7,
-    textTransform: "uppercase",
-    marginBottom: 7,
-    cursor:"pointer",
-    '@media (max-width: 470px)': {
-        fontSize:12,
-      },
-    '@media (max-width: 373px)': {
-      fontSize:10,
-    },
+  mailto:{
+    color:"#000",
   },
 
-  nextButton:{
-    display:"flex",
-    justifyContent:"space-between",
-    alignItems:"center",
-    marginTop:20,
-    transition:"0.2s",
-    width:50,
-    ":hover":{
-      width:60,
-    }
-  },
-  nextText:{
-    color:"#838383",
-  },
-  nextImg:{
-    width:18,
-    paddingLeft:10,
-  },
+
+
+
+
+
+
+
+
 });
 
 export default HomePage;
