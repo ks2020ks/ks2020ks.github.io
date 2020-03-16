@@ -18,7 +18,7 @@ class HomePage extends React.Component {
             <h1 className={css(styles.h1)}>
               <span className={css(styles.highlited)}>USTAVIMO</span> KORONO <span className={css(styles.highlited)}>SKUPAJ</span>
             </h1>
-            <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="../assets/logo.png" />
+            <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="./assets/logo.png" />
           </div>
         </div>
         <div className={css(styles.grayBack)}>
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
 
   heroWrapper:{
     backgroundPosition:"50%",
-    backgroundImage: "url('../../assets/hero.jpg')",
+    backgroundImage: "url('./assets/hero.jpg')",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     width:"100%",
