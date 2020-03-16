@@ -6,6 +6,23 @@ import Helmet from "react-helmet";
 
 @autobind
 class HomePage extends React.Component {
+  state = { 
+    open1:true,
+    open2:false,
+    open3:false,
+  }
+
+
+  open1(){
+    this.setState({open1:true,open2:false,open3:false,})
+  }
+  open2(){
+    this.setState({open1:false,open2:true,open3:false,})
+  }
+  open3(){
+    this.setState({open1:false,open2:false,open3:true,})
+  }
+
   render() {
     return (
       <div className={css(styles.wrapper)}>
@@ -118,27 +135,105 @@ class HomePage extends React.Component {
         <div className={css(styles.grayBack)}>
           <div className={css(styles.section3Wrapper)}>
             <div className={css(styles.oknca)}>
-              <div className={css(styles.oknce)}>
-                KAKO <span className={css(styles.highlited)}>RAVNATI</span> OB SUMU NA OKUŽBO?
+              <div onClick={this.open1} className={this.state.open1 ? css(styles.oknceActive) : css(styles.oknce)}>
+                <div className={css(styles.oknceText)}>
+                  KAKO <span className={css(styles.highlited)}>RAVNATI</span> OB SUMU NA OKUŽBO?
+                </div>
+                <img className={css(styles.arrDown)} alt="puščica korona" src={this.state.open1 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
               </div>
-              <div className={css(styles.oknce)}>
-                KAKO LAHKO <span className={css(styles.highlited)}>PREPREČIŠ</span> OKUŽBO?
+              <div onClick={this.open2} className={this.state.open2 ? css(styles.oknceActive) : css(styles.oknce)}>
+                <div className={css(styles.oknceText)}>
+                  KAKO LAHKO <span className={css(styles.highlited)}>PREPREČIŠ</span> OKUŽBO?
+                </div>
+                <img className={css(styles.arrDown)} alt="puščica korona" src={this.state.open2 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} /> 
               </div>
-              <div className={css(styles.oknce)}>
-                <span className={css(styles.highlited)}>UKREPI</span> VLADE
+              <div onClick={this.open3} className={this.state.open3 ? css(styles.oknceActive) : css(styles.oknce)}>
+                <div className={css(styles.oknceText)}>
+                  <span className={css(styles.highlited)}>UKREPI</span> VLADE
+                </div>
+                <img className={css(styles.arrDown3)} alt="puščica korona" src={this.state.open3 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
               </div>
             </div>
             <div className={css(styles.textWrapper)}>
-              <div className={css(styles.text)}>
-              
+              <div className={this.state.open1 ? css(styles.textActive) : css(styles.text)}>
+                <p>
+                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
+                </p>
+                <p>
+                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
+                </p>
+                <ul>
+                  <li>Ne dotikamo se oči, nosu in ust.</li>
+                  <li>Če zbolimo, ostanemo doma.</li>
+                  <li>Upoštevamo pravila higiene kašlja.</li>
+                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
+                </ul>
+                <p>
+                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
+                </p>
               </div>
-              <div className={css(styles.text)}>
-              
+              <div className={this.state.open2 ? css(styles.textActive) : css(styles.text)}>
+                <p>
+                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
+                </p>
+                <p>
+                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
+                </p>
+                <ul>
+                  <li>Ne dotikamo se oči, nosu in ust.</li>
+                  <li>Če zbolimo, ostanemo doma.</li>
+                  <li>Upoštevamo pravila higiene kašlja.</li>
+                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
+                </ul>
+                <p>
+                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
+                </p>
               </div>
-              <div className={css(styles.text)}>
-              
+              <div className={this.state.open3 ? css(styles.textActive) : css(styles.text)}>
+                <p>
+                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
+                </p>
+                <p>
+                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
+                </p>
+                <ul>
+                  <li>Ne dotikamo se oči, nosu in ust.</li>
+                  <li>Če zbolimo, ostanemo doma.</li>
+                  <li>Upoštevamo pravila higiene kašlja.</li>
+                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
+                </ul>
+                <p>
+                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className={css(styles.section4Wrapper)}>
+          <div className={css(styles.section4WrapperLeft)}>
+            <div class="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-width="500" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/KrizniStabRS/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/KrizniStabRS/">Krizni štab Republike Slovenije</a></blockquote></div>
+          </div>
+          <div className={css(styles.section4WrapperRight)}>
+            <a class="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
+          </div>
+        </div>
+
+        <div className={css(styles.blackBack)}>
+          <div className={css(styles.section5Wrapper)}>
+            <div className={css(styles.section5Text)}>
+              <span className={css(styles.highlited)}>Prijavi kršiteje</span>, ki ne upoštevajo prepovedi neposredne prodaje blaga in storitev.  
+            </div>
+            <div className={css(styles.section5Button)}>
+              PRIJAVI TUKAJ!
+            </div>
+          </div>
+        </div>
+
+        <div className={css(styles.section6Wrapper)}>
+          <img src="./assets/logoFooter.jpg" alt="krizni štab republike Slovenije" className={css(styles.section6Logo)} />
+          <div className={css(styles.section6Text)}>
+            Podporna stran Kriznega štaba vlade Republike Slovenije. Kontakt: krizni-stab@gov.si
           </div>
         </div>
 
@@ -377,24 +472,179 @@ const styles = StyleSheet.create({
   oknce:{
     border:"5px rgb(0,0,0) solid",
     padding:10,
-    paddingRight:56,
     height:100,
     width:"23%",
-    minWidth:200,
+    userSelect:"none",
+    minWidth:300,
     fontSize:24,
     background:"#fff",
-    transition:"0.2",
+    transition:"0.2s",
     cursor:"pointer",
+    textAlign:"center",
+    position:"relative",
     ":hover":{
       border:"5px rgb(7,236,236) solid",
     }
   },
+  oknceActive:{
+    userSelect:"none",
+    border:"5px rgb(7,236,236) solid",
+    padding:10,
+    height:100,
+    width:"23%",
+    minWidth:300,
+    fontSize:24,
+    background:"#fff",
+    transition:"0.2s",
+    cursor:"pointer",
+    textAlign:"center",
+    position:"relative",
+  },
+  oknceText:{
+    paddingRight:56,
+    textAlign:"left",
+  },
+  arrDown:{
+    width:50,
+    marginTop:15,
+  },
+  arrDown3:{
+    width:50,
+    marginTop:45,
+  },
   textWrapper:{
-
+    paddingTop:30,
   },
   text:{
-
+    overflow:"hidden",
+    maxHeight:0,
+    transition:"0.2s",
   },
+  textActive:{
+    overflow:"hidden",
+    maxHeight:800,
+    transition:"0.7s 0.3s",
+  },
+
+
+
+
+
+
+
+
+  section4Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    display:"flex",
+    justifyContent:"space-between",
+    paddingTop:50,
+    paddingBottom:80,
+  },
+  section4WrapperLeft:{
+    width:"calc(50% - 40px)",
+  },
+  section4WrapperRight:{
+    width:"calc(50% - 40px)",
+  },
+
+
+
+  blackBack:{
+    background:"#333333",
+  },
+  section5Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    display:"flex",
+    justifyContent:"space-between",
+    paddingTop:50,
+    alignItems:"center",
+    paddingBottom:50,
+  },
+  section5Text:{
+    fontSize:30,
+    maxWidth:600,
+    lineHeight:1.4,
+    color:"#fff",
+  },
+  section5Button:{
+    color:"#fff",
+    padding:"15px 30px",
+    fontWeight:500,
+    border:"4px solid rgb(7,236,236)",
+    cursor:"pointer",
+    transition:"0.2s",
+    ":hover":{
+      boxShadow: "0px 2px 24px rgba(21, 23, 54, 0.15)",
+    }
+  },
+
+
+
+
+  section6Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    display:"flex",
+    justifyContent:"center",
+    paddingTop:30,
+    alignItems:"center",
+    paddingBottom:50,
+  },
+  section6Logo:{
+    width:100,
+  },
+  section6Text:{
+    marginLeft:30,
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
