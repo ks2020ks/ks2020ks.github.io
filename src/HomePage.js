@@ -80,7 +80,7 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID RAZŠIRJENOSTI OKUŽBE S KORONAVIRUSOM
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="htstps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
@@ -244,7 +244,7 @@ class HomePage extends React.Component {
           </div>
         </div>
         
-        {/*<div className={css(styles.section4Wrapper)}>
+        <div className={css(styles.section4Wrapper)}>
           <div className={css(styles.section4WrapperLeftDesktop1)}>
             <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
@@ -258,7 +258,7 @@ class HomePage extends React.Component {
             <a href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @KrizniStabRS</a>
             <a className="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
           </div>
-        </div>*/}
+        </div>
 
         <div className={css(styles.blackBack)}>
           <div className={css(styles.section5Wrapper)}>
