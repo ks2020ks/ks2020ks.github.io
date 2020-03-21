@@ -7,9 +7,9 @@ import Helmet from "react-helmet";
 @autobind
 class HomePage extends React.Component {
   state = { 
-    open1:true,
+    open1:false,
     open2:false,
-    open3:false,
+    open3:true,
   }
 
 
@@ -38,13 +38,14 @@ class HomePage extends React.Component {
             <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="./assets/logo.png" />
           </div>
         </div>
+
         <div className={css(styles.grayBack)}>
           <div className={css(styles.section1Wrapper)}>
             <div className={css(styles.section1Left)}>
               <div className={css(styles.krogci)}>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    6712
+                    9860
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO TESTIRANJ
@@ -52,7 +53,7 @@ class HomePage extends React.Component {
                 </div>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    253
+                    319
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO OKUŽENIH
@@ -79,7 +80,7 @@ class HomePage extends React.Component {
                 <div className={css(styles.zemljevidTitle)}>
                   ZEMLJEVID RAZŠIRJENOSTI OKUŽBE S KORONAVIRUSOM
                 </div>
-                <embed className={css(styles.zemljevidMap)} src="https://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
+                <embed className={css(styles.zemljevidMap)} src="htstps://gdiljubljana.maps.arcgis.com/apps/opsdashboard/index.html#/1cf4f90e05984ae5a365f4838f746138" />
               </div>
             </div>
             <div className={css(styles.section1Right)}>
@@ -119,7 +120,7 @@ class HomePage extends React.Component {
         <div className={css(styles.section2Wrapper)}>
           <h2 className={css(styles.section2Title)}>
             IMAŠ TE     
-            <span className={css(styles.highlited)}>   SIMPTOME</span>?
+            <span className={css(styles.highlited2)}>   SIMPTOME</span>?
           </h2>
           <div className={css(styles.simptomi)}>
             <div className={css(styles.simptom)}>
@@ -137,7 +138,7 @@ class HomePage extends React.Component {
             <div className={css(styles.simptom)}>
               <img alt="korona simptom" src="./assets/simptom3.png" className={css(styles.simptomImg)}/>
               <div className={css(styles.simptomText)}>
-                  TEŽAVE <span className={css(styles.highlited)}>PRI DIHANJU</span>
+                  TEŽAVE PRI DIHANJU
               </div>
             </div>
           </div>
@@ -147,33 +148,19 @@ class HomePage extends React.Component {
           <div className={css(styles.section3Wrapper)}>
             <div className={css(styles.oknca)}>
               <div onClick={this.open1} className={this.state.open1 ? css(styles.oknceActive) : css(styles.oknce)}>
-                <div className={css(styles.oknceText)}>
-                  KAKO <span className={css(styles.highlited)}>RAVNATI</span> OB SUMU NA OKUŽBO?
+                <div className={this.state.open1 ? css(styles.oknceTextActive) : css(styles.oknceText)}>
+                  KAKO RAVNATI OB SUMU NA OKUŽBO?
                 </div>
-                <img className={css(styles.arrDown)} alt="puščica korona" src={this.state.open1 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
+                <img className={css(styles.arrDown)} alt="puščica korona" src={!this.state.open1 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
               </div>
               <div className={this.state.open1 ? css(styles.textMobileActive) : css(styles.textMobile)}>
-                <p>
-                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
-                </p>
-                <p>
-                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
-                </p>
-                <ul>
-                  <li>Ne dotikamo se oči, nosu in ust.</li>
-                  <li>Če zbolimo, ostanemo doma.</li>
-                  <li>Upoštevamo pravila higiene kašlja.</li>
-                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
-                </ul>
-                <p>
-                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
-                </p>
+                
               </div>
               <div onClick={this.open2} className={this.state.open2 ? css(styles.oknceActive) : css(styles.oknce)}>
-                <div className={css(styles.oknceText)}>
-                  KAKO LAHKO <span className={css(styles.highlited)}>PREPREČIŠ</span> OKUŽBO?
+                <div className={this.state.open2 ? css(styles.oknceTextActive) : css(styles.oknceText)}>
+                  KAKO LAHKO PREPREČIŠ OKUŽBO?
                 </div>
-                <img className={css(styles.arrDown)} alt="puščica korona" src={this.state.open2 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} /> 
+                <img className={css(styles.arrDown)} alt="puščica korona" src={!this.state.open2 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} /> 
               </div>
               <div className={this.state.open2 ? css(styles.textMobileActive) : css(styles.textMobile)}>
                 <p>
@@ -193,46 +180,31 @@ class HomePage extends React.Component {
                 </p>
               </div>
               <div onClick={this.open3} className={this.state.open3 ? css(styles.oknceActive) : css(styles.oknce)}>
-                <div className={css(styles.oknceText)}>
-                  <span className={css(styles.highlited)}>UKREPI</span> VLADE
+                <div className={this.state.open3 ? css(styles.oknceTextActive) : css(styles.oknceText)}>
+                  UKREPI VLADE
                 </div>
-                <img className={css(styles.arrDown3)} alt="puščica korona" src={this.state.open3 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
+                <img className={css(styles.arrDown3)} alt="puščica korona" src={!this.state.open3 ? "./assets/arrDownActive.png" : "./assets/arrDown.png"} />
               </div>
               <div className={this.state.open3 ? css(styles.textMobileActive) : css(styles.textMobile)}>
-                <p>
-                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
-                </p>
-                <p>
-                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
-                </p>
-                <ul>
-                  <li>Ne dotikamo se oči, nosu in ust.</li>
-                  <li>Če zbolimo, ostanemo doma.</li>
-                  <li>Upoštevamo pravila higiene kašlja.</li>
-                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
-                </ul>
-                <p>
-                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
-                </p>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
+                  <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
+                  <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
               </div>
             </div>
             <div className={css(styles.textWrapper)}>
               <div className={this.state.open1 ? css(styles.textDesktopActive) : css(styles.textDesktop)}>
-                <p>
-                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
-                </p>
-                <p>
-                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
-                </p>
-                <ul>
-                  <li>Ne dotikamo se oči, nosu in ust.</li>
-                  <li>Če zbolimo, ostanemo doma.</li>
-                  <li>Upoštevamo pravila higiene kašlja.</li>
-                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
-                </ul>
-                <p>
-                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
-                </p>
+                
               </div>
               <div className={this.state.open2 ? css(styles.textDesktopActive) : css(styles.textDesktop)}>
                 <p>
@@ -252,27 +224,27 @@ class HomePage extends React.Component {
                 </p>
               </div>
               <div className={this.state.open3 ? css(styles.textDesktopActive) : css(styles.textDesktop)}>
-                <p>
-                  Pri preprečevanju okužbe s koronavirusom veljajo enaka načela preventive kot pri preprečevanju drugih nalezljivih bolezni, ki povzročajo okužbe dihal. Najbolj učinkovita sta vsakodnevna preventivna ukrepa: redno umivanje rok z vodo in milom ter higiena kašlja. Priporočljivo pa je upoštevati tudi te vsakodnevne preventivne ukrepe:
-                </p>
-                <p>
-                  Izogibamo se tesnim stiskom z ljudmi, ki kažejo znake nalezljive bolezni.
-                </p>
-                <ul>
-                  <li>Ne dotikamo se oči, nosu in ust.</li>
-                  <li>Če zbolimo, ostanemo doma.</li>
-                  <li>Upoštevamo pravila higiene kašlja.</li>
-                  <li>Redno si umivamo roke z milom in toplo vodo.</li>
-                </ul>
-                <p>
-                  Če voda in milo nista dostopna, za razkuževanje rok uporabimo namensko razkužilo za roke. Vsebnost alkohola v razkužilu za roke naj bo najmanj 60 odstotkov. Razkužilo za roke je namenjeno samo za zunanjo uporabo. Sredstva za čiščenje/razkuževanje površin niso namenjena čiščenju/razkuževanju kože.Glede na trenutno epidemiološko stanje splošna uporaba zaščitnih mask ni potrebna. V času povečanega pojavljanja okužb dihal se izogibamo zaprtih prostorov, v katerih se zadržuje veliko ljudi. Poskrbimo za redno zračenje zaprtih prostorov.
-                </p>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
+                  <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
+                  <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
         
-        <div className={css(styles.section4Wrapper)}>
+        {/*<div className={css(styles.section4Wrapper)}>
           <div className={css(styles.section4WrapperLeftDesktop1)}>
             <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
@@ -286,7 +258,7 @@ class HomePage extends React.Component {
             <a href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @KrizniStabRS</a>
             <a className="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
           </div>
-        </div>
+        </div>*/}
 
         <div className={css(styles.blackBack)}>
           <div className={css(styles.section5Wrapper)}>
@@ -333,19 +305,23 @@ const styles = StyleSheet.create({
     width:"100%",
   },
   h1:{
-    fontWeight:400,
+    fontWeight:600,
     fontSize:"50px",
     color:"#fff",
-    '@media (max-width: 900px)': {
+    '@media (max-width: 980px)': {
       fontSize:38,
     },
-    '@media (max-width: 700px)': {
+    '@media (max-width: 770px)': {
       fontSize:38,
-      maxWidth:430,
+      maxWidth:510,
     },
-    '@media (max-width: 470px)': {
-      fontSize:24,
-      maxWidth:290,
+    '@media (max-width: 570px)': {
+      fontSize:28,
+      maxWidth:370,
+    },
+    '@media (max-width: 395px)': {
+      fontSize:23,
+      maxWidth:300,
     },
   },
   titleWrapper:{
@@ -364,6 +340,9 @@ const styles = StyleSheet.create({
     '@media (max-width: 500px)': {
       width:"calc(100% - 50px)",
     },
+    '@media (max-width: 395px)': {
+      height:140,
+    },
   },
   logo:{
     position:"absolute",
@@ -380,6 +359,10 @@ const styles = StyleSheet.create({
   highlited:{
     color:"rgb(7,236,236)",
   },
+  highlited2:{
+    color:"rgb(7,236,236)",
+    paddingLeft:3,
+  },
 
 
 
@@ -394,9 +377,10 @@ const styles = StyleSheet.create({
     display:"flex",
     justifyContent:"space-between",
     paddingTop:50,
-    paddingBottom:80,
+    paddingBottom:60,
     '@media (max-width: 1000px)': {
       flexDirection:"column",
+      paddingBottom:40,
     },
     '@media (max-width: 500px)': {
       width:"calc(100% - 50px)",
@@ -419,17 +403,17 @@ const styles = StyleSheet.create({
       margin:"0 auto",
       justifyContent:"space-between",
     },
-    '@media (max-width: 600px)': {
+    '@media (max-width: 650px)': {
       flexWrap:"wrap",
-      maxWidth:400,
+      maxWidth:360,
     },
   },
   krogec:{
-    width:140,
+    width:133.3,
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
-    '@media (max-width: 600px)': {
+    '@media (max-width: 650px)': {
       marginBottom:40,
     },
     '@media (max-width: 400px)': {
@@ -438,19 +422,23 @@ const styles = StyleSheet.create({
   },
   krogecCounter:{
     borderRadius:"50%",
-    width:90,
-    height:90,
-    background:"#fff",
-    border:"5px rgb(7,236,236) solid",
+    width:80,
+    height:80,
+    background:"#333",
+    border:"6px rgb(7,236,236) solid",
     display:"flex",
+    color:"#fff",
     justifyContent:"center",
     alignItems:"center",
   },
   krogecText:{
     marginTop:20,
-    fontSize:12,
-    fontWeight:600,
+    fontSize:14,
+    fontWeight:700,
     textAlign:"center",
+    '@media (max-width: 400px)': {
+     fontSize:12,
+    },
   },
   zemljevid:{
     marginTop:50,
@@ -468,10 +456,22 @@ const styles = StyleSheet.create({
     marginBottom:20,
     fontWeight:600,
     maxWidth:380,
+    '@media (max-width: 420px)': {
+      fontSize:22,
+    },
+    '@media (max-width: 400px)': {
+      fontSize:20,
+    },
+    '@media (max-width: 360px)': {
+      fontSize:18,
+    },
+    '@media (max-width: 330px)': {
+      fontSize:17,
+    },
   },
   zemljevidMap:{
     width:"100%",
-    height:440,
+    height:500,
     background:"#000",
 
   },                
@@ -506,8 +506,8 @@ const styles = StyleSheet.create({
     lineHeight:1.4,
     marginTop:30,
     marginBottom:40,
-    fontSize:30,
-    fontWeight:500,
+    fontSize:24,
+    fontWeight:600,
     '@media (max-width: 400px)': {
       fontSize:24,
     },
@@ -524,12 +524,16 @@ const styles = StyleSheet.create({
     alignItems:"center",
     flexDirection:"column",
     height:110,
-    fontSize:22,
+    fontSize:24,
+    fontWeight:600,
     textAlign:"center",
     cursor:"pointer",
     transition:"0.2s",
     ":hover":{
       boxShadow: "0px 2px 24px rgba(21, 23, 54, 0.15)",
+    },
+    '@media (max-width: 400px)': {
+      fontSize:20,
     },
   },
   highlitetWhite:{
@@ -546,18 +550,25 @@ const styles = StyleSheet.create({
     flexDirection:"column",
     height:110,
     color:"rgb(7,236,236)",
-    fontSize:22,
+    fontSize:24,
+    fontWeight:600,
     textAlign:"center",
     cursor:"pointer",
     transition:"0.2s",
     ":hover":{
       boxShadow: "0px 2px 24px rgba(21, 23, 54, 0.15)",
     },
+    '@media (max-width: 400px)': {
+      fontSize:20,
+    },
   },  
   socials:{
     display:"flex",
     justifyContent:"space-between",
     padding:"50px 40px",
+    '@media (max-width: 400px)': {
+      padding:"50px 20px",
+    },
   },
   socialLink:{
 
@@ -577,7 +588,9 @@ const styles = StyleSheet.create({
 
 
 
-
+  darkGrayBack:{
+    background:"#333333",
+  },
   section2Wrapper:{
     width:"calc(100% - 80px)",
     maxWidth:1200,
@@ -588,7 +601,7 @@ const styles = StyleSheet.create({
     alignItems:"center",
     paddingTop:80,
     paddingBottom:80,
-    '@media (max-width: 550px)': {
+    '@media (max-width: 650px)': {
       width:"calc(100% - 40px)",
     },
     '@media (max-width: 480px)': {
@@ -597,7 +610,9 @@ const styles = StyleSheet.create({
   },
   section2Title:{
     marginBottom:40,
+    color:"#333",
     fontSize:24,
+    fontWeight:600,
   },
   simptomi:{
     display:"flex",
@@ -625,7 +640,7 @@ const styles = StyleSheet.create({
       marginRight:0,
     },
     '@media (max-width: 800px)': {
-      width:170,
+      width:180,
     },
     '@media (max-width: 480px)': {
       marginBottom:40,
@@ -640,7 +655,7 @@ const styles = StyleSheet.create({
       width:122,
     },
     '@media (max-width: 480px)': {
-      width:155,
+      width:210,
     },
   },
   simptomImg:{
@@ -652,18 +667,26 @@ const styles = StyleSheet.create({
       width:120,
     },
     '@media (max-width: 480px)': {
-     width:150,
+      width:200,
     },
   },
   simptomText1:{
+    fontWeight:600,
     '@media (max-width: 600px)': {
+      fontSize:13,
+    },
+    '@media (max-width: 480px)': {
       fontSize:14,
     },
   },
   simptomText:{
+    fontWeight:600,
     marginTop:10,
     textAlign:"center",
     '@media (max-width: 600px)': {
+      fontSize:13,
+    },
+    '@media (max-width: 480px)': {
       fontSize:14,
     },
   },
@@ -690,20 +713,22 @@ const styles = StyleSheet.create({
     },
   },
   oknce:{
-    border:"5px rgb(0,0,0) solid",
+    border:"5px #333 solid",
     padding:10,
     height:100,
     width:"20%",
     userSelect:"none",
     minWidth:300,
     fontSize:24,
-    background:"#fff",
+    color:"#fff",
+    background:"#333",
     transition:"0.2s",
     cursor:"pointer",
     textAlign:"center",
     position:"relative",
     ":hover":{
       border:"5px rgb(7,236,236) solid",
+      color:"rgb(7,236,236)",
     },
     '@media (max-width: 1100px)': {
       fontSize:20,
@@ -715,7 +740,8 @@ const styles = StyleSheet.create({
       height:80,
     },
     '@media (max-width: 800px)': {
-      minWidth:165,
+      minWidth:170,
+      fontSize:15,
       marginBottom:20,
       flexDirection:"column",
     },
@@ -727,11 +753,11 @@ const styles = StyleSheet.create({
     userSelect:"none",
     border:"5px rgb(7,236,236) solid",
     padding:10,
+    background:"rgb(7,236,236)",
     height:100,
     width:"23%",
     minWidth:300,
     fontSize:24,
-    background:"#fff",
     transition:"0.2s",
     cursor:"pointer",
     textAlign:"center",
@@ -746,7 +772,8 @@ const styles = StyleSheet.create({
       height:80,
     },
     '@media (max-width: 800px)': {
-      minWidth:165,
+      minWidth:170,
+      fontSize:15,
       flexDirection:"column",
       marginBottom:20,
     },
@@ -755,6 +782,14 @@ const styles = StyleSheet.create({
     },
   },
   oknceText:{
+    fontWeight:700,
+    '@media (max-width: 700px)': {
+      maxWidth:200,
+      margin:"0 auto",
+    }
+  },
+  oknceTextActive:{
+    fontWeight:700,
     '@media (max-width: 700px)': {
       maxWidth:200,
       margin:"0 auto",
@@ -773,7 +808,6 @@ const styles = StyleSheet.create({
   },
   textWrapper:{
     paddingTop:30,
-    minHeight:320,
     '@media (max-width: 800px)': {
       paddingTop:10,
       minHeight:0,
@@ -782,7 +816,7 @@ const styles = StyleSheet.create({
   textMobile:{
     overflow:"hidden",
     maxHeight:0,
-    transition:"0.2s",
+    transition:"0.3s",
     '@media (min-width: 700px)': {
       display:"none",
     }
@@ -790,7 +824,7 @@ const styles = StyleSheet.create({
   textDesktop:{
     overflow:"hidden",
     maxHeight:0,
-    transition:"0.2s",
+    transition:"0.3s",
     '@media (max-width: 700px)': {
       display:"none",
     }
@@ -798,8 +832,7 @@ const styles = StyleSheet.create({
   textMobileActive:{
     overflow:"hidden",
     maxHeight:800,
-    
-    transition:"max-height 0.4s, margin-bottom 0.2s",
+    transition:"max-height 1s 0.3s, margin-bottom 0.2s 0.2s",
     marginBottom:20,
     '@media (min-width: 700px)': {
       display:"none",
@@ -809,10 +842,43 @@ const styles = StyleSheet.create({
     overflow:"hidden",
     maxHeight:800,
     
-    transition:"max-height 0.4s 0.2s, margin-bottom 0.2s",
+    transition:"max-height 1s 0.3s, margin-bottom 0.2s 0.2s",
     '@media (max-width: 700px)': {
       display:"none",
     }
+  },
+  ukrepi:{
+    marginTop:30,
+  },
+  ukrepiTitle:{
+    fontWeight:600,
+    fontSize:14,
+  },
+  ukrepiLink:{
+    fontSize:12,
+    paddingTop:15,
+    paddingBottom:5,
+    paddingRight:5,
+    width:185,
+    justifyContent:"space-between",
+    color:"#333",
+    textDecoration:"none",
+    display:"flex",
+    alignItems:"center",
+    transition:"0.2s",
+    ":hover":{
+      width:177,
+      paddingLeft:8,
+      textDecoration:"underline",
+    }
+  },
+  ukrepImage:{
+    width:50,
+    transform:"rotate(270deg)",
+  },
+  ukrepContent:{
+    whiteSpace: "nowrap",
+    fontWeight:600,
   },
 
 
@@ -897,7 +963,7 @@ const styles = StyleSheet.create({
     paddingTop:50,
     alignItems:"center",
     paddingBottom:50,
-    '@media (max-width: 600px)': {
+    '@media (max-width: 620px)': {
       flexDirection:"column",
     },
     '@media (max-width: 500px)': {
@@ -905,21 +971,21 @@ const styles = StyleSheet.create({
     },
   },
   section5Text:{
-    fontSize:30,
-    maxWidth:600,
+    fontSize:24,
+    fontWeight:600,
+    maxWidth:550,
     lineHeight:1.4,
     color:"#fff",
-    '@media (max-width: 900px)': {
-      maxWidth:450,
-      fontSize:24,
+    '@media (max-width: 850px)': {
+      maxWidth:400,
     },
-    '@media (max-width: 750px)': {
-      maxWidth:300,
+    '@media (max-width: 700px)': {
+      maxWidth:340,
       fontSize:20,
     },
-    '@media (max-width: 600px)': {
-      maxWidth:380,
-      fontSize:24,
+    '@media (max-width: 620px)': {
+      maxWidth:360,
+      fontSize:20,
       textAlign:"center",
     },
   },
@@ -927,11 +993,11 @@ const styles = StyleSheet.create({
     color:"#fff",
     textDecoration:"none",
     padding:"15px 30px",
-    fontWeight:500,
+    fontWeight:600,
     border:"4px solid rgb(7,236,236)",
     cursor:"pointer",
     transition:"0.2s",
-    '@media (max-width: 600px)': {
+    '@media (max-width: 620px)': {
       marginTop:30,
     },
     ":hover":{
