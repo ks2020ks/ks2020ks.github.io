@@ -250,14 +250,14 @@ class HomePage extends React.Component {
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
                   <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
-                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
                   <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
-                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
@@ -288,14 +288,14 @@ class HomePage extends React.Component {
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
                   <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
-                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
                   <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
-                    <img alt="prometni znaki katalog signaco" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
