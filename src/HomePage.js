@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import autobind from 'core-decorators/lib/autobind';
 import Helmet from "react-helmet";
+import axios from "axios";
+
 
 @autobind
 class HomePage extends React.Component {
@@ -10,6 +12,10 @@ class HomePage extends React.Component {
     open1:false,
     open2:false,
     open3:true,
+    umrli:"",
+    oboleli:"",
+    testiranja:"",
+    novo:""
   }
 
 
@@ -22,6 +28,61 @@ class HomePage extends React.Component {
   open3(){
     this.setState({open1:false,open2:false,open3:true,})
   }
+  componentDidMount(){
+    var self = this;
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Umrli%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
+    .then(function (response) {
+      // handle success
+      console.log(response.data.features[0].attributes.value);
+      self.setState({umrli:response.data.features[0].attributes.value})
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+      self.setState({umrli:"napaka"})
+    })
+    
+
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Potrjena_okuzba%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
+    .then(function (response) {
+      // handle success
+      console.log(response.data.features[0].attributes.value);
+      self.setState({oboleli:response.data.features[0].attributes.value})
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+      self.setState({oboleli:"napaka"})
+    })
+   
+
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/stevilotestiranj/FeatureServer/5/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22stevilotestiranj%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
+    .then(function (response) {
+      // handle success
+      console.log(response.data.features[0].attributes.value);
+      self.setState({testiranja:response.data.features[0].attributes.value})
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+      self.setState({testiranja:"napaka"})
+    })
+
+
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/%C5%A0tevilo_obolenj_po_dnevih/FeatureServer/4/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Datum_obolenja%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true')
+    .then(function (response) {
+      // handle success
+      console.log(response.data.features[response.data.features.length-1].attributes.Število_novo_obolelih);
+      self.setState({novo:response.data.features[response.data.features.length-1].attributes.Število_novo_obolelih})
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+      self.setState({novo:"napaka"})
+    })
+    
+  }
+
 
   render() {
     return (
@@ -45,7 +106,7 @@ class HomePage extends React.Component {
               <div className={css(styles.krogci)}>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    9860
+                    {this.state.testiranja}
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO TESTIRANJ
@@ -53,7 +114,7 @@ class HomePage extends React.Component {
                 </div>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    319
+                    {this.state.oboleli}
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO OKUŽENIH
@@ -61,7 +122,7 @@ class HomePage extends React.Component {
                 </div>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    34
+                    {this.state.novo}
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO OKUŽENIH DANES
@@ -69,7 +130,7 @@ class HomePage extends React.Component {
                 </div>
                 <div className={css(styles.krogec)}>
                   <div className={css(styles.krogecCounter)}>
-                    1
+                    {this.state.umrli}
                   </div>
                   <div className={css(styles.krogecText)}>
                     ŠTEVILO SMRTNIH ŽRTEV
@@ -421,6 +482,7 @@ const styles = StyleSheet.create({
     },
   },
   krogecCounter:{
+    fontWeight:600,
     borderRadius:"50%",
     width:80,
     height:80,
