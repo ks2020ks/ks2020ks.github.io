@@ -164,13 +164,13 @@ class HomePage extends React.Component {
                 080 14 04
               </a>
               <div className={css(styles.socials)}>
-                <a target="_blank" rel="noopener" href="https://twitter.com/KrizniStabRS" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/KrizniStabRS" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona twitter" src="./assets/Twitter.png" />
                 </a>
-                <a target="_blank" rel="noopener" href="https://www.facebook.com/KrizniStabRS" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/KrizniStabRS" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona Facebook" src="./assets/Facebook.png" />
                 </a>
-                <a target="_blank" rel="noopener" href="https://www.instagram.com/krizni_stab_rs/" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/krizni_stab_rs/" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona Instagram" src="./assets/Instagram.png" />
                 </a>
               </div>
