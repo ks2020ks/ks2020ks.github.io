@@ -205,6 +205,67 @@ class HomePage extends React.Component {
           </div>
         </div>
 
+
+
+        <div className={css(styles.blackBack)}>
+          <div className={css(styles.section22Wrapper)}>
+            <h2 className={css(styles.section22Title)}>
+              KOLIKO ČASA   
+              <span className={css(styles.highlited2)}>   KORONAVIRUS </span>
+               PREŽIVI NA RAZLIČNIH POVRŠINAH
+            </h2>
+            <div className={css(styles.obstojnostWrapper)}>
+              <div className={css(styles.obstojnost)}>
+                <div className={css(styles.obstojnostText1)}>
+                  v <span className={css(styles.highlited)}>zraku</span>
+                </div>
+                <div className={css(styles.obstojnostext2)}>
+                  do 3 ure
+                </div>
+                <img alt="obstojnost koronavirusa zrak" src="./assets/obstojnostkoronavirusazrak.png" className={css(styles.obstojnostImg)}/>
+              </div>
+              <div className={css(styles.obstojnost)}>
+                <div className={css(styles.obstojnostText1)}>
+                  na <span className={css(styles.highlited)}>steklu</span>
+                </div>
+                <div className={css(styles.obstojnostext2)}>
+                  do 5 dni
+                </div>
+                <img alt="obstojnost koronavirusa steklo" src="./assets/obstojnost-koronavirusa-steklo.png" className={css(styles.obstojnostImg)}/>
+              </div>
+              <div className={css(styles.obstojnost)}>
+                <div className={css(styles.obstojnostText1)}>
+                  na <span className={css(styles.highlited)}>kartonu</span>
+                </div>
+                <div className={css(styles.obstojnostext2)}>
+                  do 1 dan
+                </div>
+                <img alt="obstojnost koronavirusa karton" src="./assets/obstojnost-koronavirusa-karton.png" className={css(styles.obstojnostImg)}/>
+              </div>
+              <div className={css(styles.obstojnost)}>
+                <div className={css(styles.obstojnostText1)}>
+                  na <span className={css(styles.highlited)}>plastiki</span>
+                </div>
+                <div className={css(styles.obstojnostext2)}>
+                  do 3 dni
+                </div>
+                <img alt="obstojnost koronavirusa palstika" src="./assets/obstojnost-koronavirusa-plastika.png" className={css(styles.obstojnostImg)}/>
+              </div>
+              <div className={css(styles.obstojnost)}>
+                <div className={css(styles.obstojnostText1)}>
+                  na <span className={css(styles.highlited)}>kovini</span>
+                </div>
+                <div className={css(styles.obstojnostext2)}>
+                  do 3 dni
+                </div>
+                <img alt="obstojnost koronavirusa kovina" src="./assets/obstojnost-koronavirusa-kovina.png" className={css(styles.obstojnostImg)}/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
         <div className={css(styles.grayBack)}>
           <div className={css(styles.section3Wrapper)}>
             <div className={css(styles.oknca)}>
@@ -752,6 +813,85 @@ const styles = StyleSheet.create({
       fontSize:14,
     },
   },
+
+
+
+
+
+
+
+
+  section22Wrapper:{
+    width:"calc(100% - 80px)",
+    maxWidth:1200,
+    margin:"0 auto",
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"center",
+    alignItems:"center",
+    paddingTop:80,
+    paddingBottom:80,
+    '@media (max-width: 650px)': {
+      width:"calc(100% - 40px)",
+    },
+    '@media (max-width: 480px)': {
+      paddingBottom:40,
+    },
+  },
+  section22Title:{
+    marginBottom:50,
+    color:"#FFF",
+    fontSize:24,
+    fontWeight:600,
+    maxWidth:500,
+    textAlign:"center",
+    '@media (max-width: 900px)': {
+      marginBottom:20,
+    }
+  },
+  obstojnostWrapper:{
+    display:"flex",
+    justifyContent:"space-between",
+    '@media (max-width: 900px)': {
+      flexWrap:"wrap",
+      justifyContent:"flex-start",
+    },
+  },
+  obstojnost:{
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
+    marginLeft:20,
+    marginRight:20,
+    '@media (max-width: 900px)': {
+      flexBasis:"33%",
+      marginLeft:0,
+      marginRight:0,
+      marginTop:30,
+    },
+    '@media (max-width: 500px)': {
+      flexBasis:"50%",
+    }
+  },
+  obstojnostText1:{
+    fontWeight:600,
+    fontSize:18,
+    color:"#fff",
+  },
+  obstojnostext2:{
+    fontWeight:600,
+    fontSize:18,
+    color:"#333",
+    background:"rgb(7,236,236)",
+    padding:"4px 6px 2px 6px",
+    marginTop:5,
+  },
+  obstojnostImg:{
+    height:140,
+  },
+
+
+
 
 
 
