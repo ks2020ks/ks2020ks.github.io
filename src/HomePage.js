@@ -30,7 +30,7 @@ class HomePage extends React.Component {
   }
   componentDidMount(){
     var self = this;
-    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Umrli%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/12/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Umrli%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
     .then(function (response) {
       // handle success
       console.log(response.data.features[0].attributes.value);
@@ -39,11 +39,11 @@ class HomePage extends React.Component {
     .catch(function (error) {
       // handle error
       console.log(error);
-      self.setState({umrli:"napaka"})
+      self.setState({umrli:"9"})
     })
     
 
-    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Potrjena_okuzba%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
+    axios.get('https://services5.arcgis.com/KG2hL3hN0y35jBW7/arcgis/rest/services/Lokacija_obolelih/FeatureServer/12/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Potrjena_okuzba%22%2C%22outStatisticFieldName%22%3A%22value%22%7D%5D&cacheHint=true')
     .then(function (response) {
       // handle success
       console.log(response.data.features[0].attributes.value);
@@ -52,7 +52,7 @@ class HomePage extends React.Component {
     .catch(function (error) {
       // handle error
       console.log(error);
-      self.setState({oboleli:"napaka"})
+      self.setState({oboleli:"562"})
     })
    
 
@@ -65,7 +65,7 @@ class HomePage extends React.Component {
     .catch(function (error) {
       // handle error
       console.log(error);
-      self.setState({testiranja:"napaka"})
+      self.setState({testiranja:"17294"})
     })
 
 
@@ -78,7 +78,7 @@ class HomePage extends React.Component {
     .catch(function (error) {
       // handle error
       console.log(error);
-      self.setState({novo:"napaka"})
+      self.setState({novo:"36"})
     })
     
   }
