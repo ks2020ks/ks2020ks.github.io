@@ -96,7 +96,7 @@ class HomePage extends React.Component {
             <h1 className={css(styles.h1)}>
               <span className={css(styles.highlited)}>USTAVIMO</span> KORONAVIRUS <span className={css(styles.highlited)}>SKUPAJ</span>
             </h1>
-            <img className={css(styles.logo)} alt="krizni štab republike slovenije" src="./assets/logo.png" />
+            <img className={css(styles.logo)} alt="" src="" />
           </div>
         </div>
 
@@ -164,13 +164,13 @@ class HomePage extends React.Component {
                 080 14 04
               </a>
               <div className={css(styles.socials)}>
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/KrizniStabRS" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vladaRS" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona twitter" src="./assets/Twitter.png" />
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/KrizniStabRS" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/VladaRepublikeSlovenije" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona Facebook" src="./assets/Facebook.png" />
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/krizni_stab_rs/" className={css(styles.socialLink)}>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/vlada_republike_slovenije/" className={css(styles.socialLink)}>
                   <img className={css(styles.socialImg)} alt="korona Instagram" src="./assets/Instagram.png" />
                 </a>
               </div>
@@ -309,19 +309,56 @@ class HomePage extends React.Component {
               </div>
               <div className={this.state.open3 ? css(styles.textMobileActive) : css(styles.textMobile)}>
                 <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
-                  <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
-                  <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 19.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_19.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+
+
               </div>
             </div>
             <div className={css(styles.textWrapper)}>
@@ -347,15 +384,50 @@ class HomePage extends React.Component {
               </div>
               <div className={this.state.open3 ? css(styles.textDesktopActive) : css(styles.textDesktop)}>
                 <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
-                  <a href="./assets/ukrepi/15.3_ukrepi_vlade.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
-                  <a href="./assets/ukrepi/16-3-_ukrepi.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 19.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_19.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
                     <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
                   </a>
@@ -368,17 +440,17 @@ class HomePage extends React.Component {
         
         <div className={css(styles.section4Wrapper)}>
           <div className={css(styles.section4WrapperLeftDesktop1)}>
-            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+            <div className="fb-page" data-href="https://www.facebook.com/VladaRepublikeSlovenije" data-tabs="timeline" data-height="640" data-width="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
           <div className={css(styles.section4WrapperLeftDesktop2)}>
-            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="380" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+            <div className="fb-page" data-href="https://www.facebook.com/VladaRepublikeSlovenije" data-tabs="timeline" data-height="640" data-width="380" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
           <div className={css(styles.section4WrapperLeftMobile)}>
-            <div className="fb-page" data-href="https://www.facebook.com/KrizniStabRS/" data-tabs="timeline" data-height="640" data-width="270" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
+            <div className="fb-page" data-href="https://www.facebook.com/VladaRepublikeSlovenije" data-tabs="timeline" data-height="640" data-width="270" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"></div>
           </div>
           <div className={css(styles.section4WrapperRight)}>
-            <a href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false">Follow @KrizniStabRS</a>
-            <a className="twitter-timeline" href="https://twitter.com/KrizniStabRS?ref_src=twsrc%5Etfw" data-height="600">Tweeter @KrizniStabRS</a> 
+            <a href="https://twitter.com/vladaRS?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false">Follow @vladaRS</a>
+            <a class="twitter-timeline" data-height="640" href="https://twitter.com/vladaRS?ref_src=twsrc%5Etfw">Tweets by vladaRS</a>
           </div>
         </div>
 
@@ -387,16 +459,16 @@ class HomePage extends React.Component {
             <div className={css(styles.section5Text)}>
               <span className={css(styles.highlited)}>Prijavi kršiteje</span>, ki ne upoštevajo prepovedi neposredne prodaje blaga in storitev.  
             </div>
-            <a href="mailto:prijava-stab@gov.si?subject=Prijava kršitelja" className={css(styles.section5Button)}>
+            <a href="mailto:prijava@gov.si?subject=Prijava kršitelja" className={css(styles.section5Button)}>
               PRIJAVI TUKAJ!
             </a>
           </div>
         </div>
 
         <div className={css(styles.section6Wrapper)}>
-          <img src="./assets/logoFooter.jpg" alt="krizni štab republike Slovenije" className={css(styles.section6Logo)} />
+          <img src="" alt="" className={css(styles.section6Logo)} />
           <div className={css(styles.section6Text)}>
-            Podporna stran Kriznega štaba vlade Republike Slovenije. Kontakt: <a className={css(styles.mailto)} href="mailto:krizni-stab@gov.si"> krizni-stab@gov.si</a>
+            Podporna stran. <a className={css(styles.mailto)} href="mailto:@gov.si"> </a>
           </div>
         </div>
 
