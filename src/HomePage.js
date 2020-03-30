@@ -309,54 +309,104 @@ class HomePage extends React.Component {
               </div>
               <div className={this.state.open3 ? css(styles.textMobileActive) : css(styles.textMobile)}>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 26.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_26.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 25.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_25.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 24.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_24.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 23.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_23.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 22.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_22.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 21.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_21.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 20.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_20.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 19.3.2020</div>
                   <a href="./assets/ukrepi/Ukrepi_vlade_19.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+
 
 
               </div>
@@ -384,54 +434,103 @@ class HomePage extends React.Component {
               </div>
               <div className={this.state.open3 ? css(styles.textDesktopActive) : css(styles.textDesktop)}>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 26.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_26.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 25.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_25.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 24.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_24.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 23.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_23.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 22.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_22.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
-                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
-                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 21.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_21.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 20.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_20.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
                 <div className={css(styles.ukrepi)}>
                   <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 19.3.2020</div>
                   <a href="./assets/ukrepi/Ukrepi_vlade_19.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
                     <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
-                    <div className={css(styles.ukrepContent)}>POGLEJ DOKUMENT</div>
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
                   </a>
                 </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 18.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_18.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 17.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_17.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 16.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_16.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 15.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_15.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 14.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_14.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                </div>
+                <div className={css(styles.ukrepi)}>
+                  <div className={css(styles.ukrepiTitle)}>UKREPI VLADE DNE 13.3.2020</div>
+                  <a href="./assets/ukrepi/Ukrepi_vlade_13.3.pdf" rel="noopener noreferrer" target="_blank" className={css(styles.ukrepiLink)}>
+                    <img alt="korona" src="./assets/arrDown.png" className={css(styles.ukrepImage)} />
+                    <div className={css(styles.ukrepContent)}>DOKUMENT</div>
+                  </a>
+                  </div>
 
               </div>
             </div>
@@ -1114,7 +1213,7 @@ const styles = StyleSheet.create({
   },
   textDesktopActive:{
     overflow:"hidden",
-    maxHeight:800,
+    maxHeight:1500,
     
     transition:"max-height 1s 0.3s, margin-bottom 0.2s 0.2s",
     '@media (max-width: 700px)': {
@@ -1123,27 +1222,30 @@ const styles = StyleSheet.create({
   },
   ukrepi:{
     marginTop:30,
+    display:"flex",
   },
   ukrepiTitle:{
     fontWeight:600,
     fontSize:14,
+    width:250,
   },
   ukrepiLink:{
     fontSize:12,
-    paddingTop:15,
+    paddingTop:0,
     paddingBottom:5,
     paddingRight:5,
-    width:185,
     justifyContent:"space-between",
     color:"#333",
     textDecoration:"none",
     display:"flex",
     alignItems:"center",
-    transition:"0.2s",
+    transition:"0.1s",
     ":hover":{
-      width:177,
-      paddingLeft:8,
       textDecoration:"underline",
+    },
+    '@media (max-width: 400px)': {
+      width:20,
+      justifyContent:"center",
     }
   },
   ukrepImage:{
@@ -1153,6 +1255,10 @@ const styles = StyleSheet.create({
   ukrepContent:{
     whiteSpace: "nowrap",
     fontWeight:600,
+    marginBottom:2,
+    '@media (max-width: 400px)': {
+      display:"none",
+    }
   },
 
 
